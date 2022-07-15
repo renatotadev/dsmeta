@@ -17,8 +17,10 @@ import com.renatodev.dsmeta.repository.SaleRepository;
 @Service
 public class SaleService {
 	
+	
 	@Autowired
 	private SaleRepository repository;
+	
 	
 	public Page<Sale> FindSales(String minDate, String maxDate, Pageable pageable) {
 		
@@ -29,4 +31,5 @@ public class SaleService {
 		
 		return repository.findSales(min, max, pageable);
 	}
+	
 }
